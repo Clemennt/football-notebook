@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Carnet FM – Début de saison</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="top-tabs">
+    <button onclick="location.href='index.html'">🏠 - Accueil</button>
+    <button onclick="location.href='season.html'">📋 -  Saison</button>
+    <button onclick="location.href='squad.html'">👥 - Effectif</button>
+    <button onclick="location.href='stats.html'">📊 - Statistiques</button>
+    <button onclick="location.href='scouting.html'">🔍 - Scouting</button>
+    <button onclick="location.href='scouting_youth.html'">🎓 - Scouting Jeunes</button>
+    <button onclick="location.href='review.html'">📑 - Bilan de la saison</button>
+    <button onclick="location.href='settings.html'">⚙️ - Paramètres</button>
+  </div>
+
+
+
+<h2 class="section green">Présentation de la saison</h2>
+
+<div class="row">
+    <input type="text" placeholder="Club" data-save="club">
+    <input type="text" placeholder="Division" data-save="division">
+    <input type="text" placeholder="Saison" data-save="saison">
+</div>
+
+<div class="row">
+  <!-- Objectifs du club -->
+  <div class="objectives-box">
+    <h3>🎯 Objectifs du club</h3>
+
+    <div class="objective-add">
+      <input type="text" placeholder="Ajouter un objectif…" data-objective-input="club">
+      <button type="button" class="btn" onclick="addObjective('club')">+ Ajouter</button>
+    </div>
+
+    <div class="objective-list" id="objective-list-club"></div>
+  </div>
+
+  <!-- Mes objectifs -->
+  <div class="objectives-box">
+    <h3>🎯 Mes objectifs</h3>
+
+    <div class="objective-add">
+      <input type="text" placeholder="Ajouter un objectif…" data-objective-input="me">
+      <button type="button" class="btn" onclick="addObjective('me')">+ Ajouter</button>
+    </div>
+
+    <div class="objective-list" id="objective-list-me"></div>
+  </div>
+</div>
+
+<h2 class="section blue">Finances</h2>
+
+<div class="row">
+    <input type="number" placeholder="Budget transfert" data-save="budgetTransfert">
+    <input type="number" placeholder="Budget salarial" data-save="budgetSalarial">
+    <input type="number" placeholder="Budget recherche" data-save="budgetRecherche">
+</div>
+
+<h2 class="section orange">Transferts début de saison</h2>
+
+<div class="transfers-full">
+
+    <div class="transfer-column">
+        <h3 class="pink">Arrivées</h3>
+        <table data-table="arrivees">
+            <thead>
+                <tr>
+                    <th>Nom</th>
+                    <th>Poste préféré</th>
+                    <th>Tous les postes</th>
+                    <th>Valeur</th>
+                    <th>En prêt</th>
+                    <th>Supprimé</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <button onclick="addRow('arrivees', 5)">+ Ajouter</button>
+    </div>
+
+    <div class="transfer-column">
+        <h3 class="red">Départs</h3>
+        <table data-table="departs">
+            <thead>
+                <tr>
+                    <th>Nom</th>
+                    <th>Poste préféré</th>
+                    <th>Tous les postes</th>
+                    <th>Valeur</th>
+                    <th>En prêt</th>
+                    <th>Supprimé</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <button onclick="addRow('departs', 5)">+ Ajouter</button>
+    </div>
+
+</div>
+
+
+
+<script src="script.js"></script>
+</body>
+</html>

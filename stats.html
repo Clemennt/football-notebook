@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>FM Tool – Statistiques</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<!-- Onglets -->
+  <div class="top-tabs">
+    <button onclick="location.href='index.html'">🏠 - Accueil</button>
+    <button onclick="location.href='season.html'">📋 -  Saison</button>
+    <button onclick="location.href='squad.html'">👥 - Effectif</button>
+    <button onclick="location.href='stats.html'">📊 - Statistiques</button>
+    <button onclick="location.href='scouting.html'">🔍 - Scouting</button>
+    <button onclick="location.href='scouting_youth.html'">🎓 - Scouting Jeunes</button>
+    <button onclick="location.href='review.html'">📑 - Bilan de la saison</button>
+    <button onclick="location.href='settings.html'">⚙️ - Paramètres</button>
+  </div>
+
+  <h2 class="section blue">Statistiques – Effectif Équipe Première</h2>
+
+  <div class="stats-block">
+    <table class="stats-table" data-stats="firstteam">
+      <thead>
+        <tr>
+          <th>Nom</th>
+          <th>Poste</th>
+          <th>Apparitions</th>
+          <th>Buts</th>
+          <th>P.Dec</th>
+          <th>Note</th>
+          <th>Note E</th>
+          <th>Suppr.</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <div class="stats-actions">
+      <button type="button" class="btn" onclick="addStatsRow()">+ Ajouter</button>
+      <button type="button" class="btn" onclick="importFromSquad()">📥 Importer depuis Effectif</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

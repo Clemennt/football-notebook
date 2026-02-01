@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Bilan de la saison</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <div class="top-tabs">
+    <button onclick="location.href='index.html'">🏠 - Accueil</button>
+    <button onclick="location.href='season.html'">📋 -  Saison</button>
+    <button onclick="location.href='squad.html'">👥 - Effectif</button>
+    <button onclick="location.href='stats.html'">📊 - Statistiques</button>
+    <button onclick="location.href='scouting.html'">🔍 - Scouting</button>
+    <button onclick="location.href='scouting_youth.html'">🎓 - Scouting Jeunes</button>
+    <button onclick="location.href='review.html'">📑 - Bilan de la saison</button>
+    <button onclick="location.href='settings.html'">⚙️ - Paramètres</button>
+  </div>
+
+
+  <h2 class="section blue">Bilan de la saison</h2>
+
+  <!-- BILAN GLOBAL -->
+  <div class="bilan-grid">
+
+  <!-- Colonne gauche / droite -->
+  <div class="block">
+    <h3>Bilan global</h3>
+    <textarea data-save="bilan_resume" placeholder="Résumé global de la saison..."></textarea>
+    <textarea data-save="bilan_positif" placeholder="Points positifs..."></textarea>
+    <textarea data-save="bilan_negatif" placeholder="Points négatifs..."></textarea>
+  </div>
+
+  <div class="block">
+    <h3>Saison prochaine</h3>
+    <textarea data-save="bilan_ventes" placeholder="Joueurs à vendre / prêter..."></textarea>
+    <textarea data-save="bilan_jeunes" placeholder="Jeunes à intégrer en Équipe Première..."></textarea>
+    <textarea data-save="bilan_surveillance" placeholder="Joueurs à surveiller (prêts, contrats, progression)..."></textarea>
+    <textarea data-save="bilan_autres" placeholder="Autres décisions..."></textarea>
+  </div>
+
+  <!-- Ligne du dessous -->
+  <div class="block">
+    <h3>Préparation mercato</h3>
+    <textarea data-save="bilan_postes" placeholder="Postes à renforcer..."></textarea>
+    <textarea data-save="bilan_profils" placeholder="Profils prioritaires recherchés..."></textarea>
+    <textarea data-save="bilan_budget" placeholder="Budget / contraintes..."></textarea>
+  </div>
+
+  <div class="block">
+    <h3>Bilan tactique</h3>
+    <textarea data-save="bilan_tactique_ok" placeholder="Ce qui a bien fonctionné..."></textarea>
+    <textarea data-save="bilan_tactique_nok" placeholder="Ce qui n’a pas fonctionné..."></textarea>
+    <textarea data-save="bilan_tactique_next" placeholder="Ajustements prévus..."></textarea>
+  </div>
+
+</div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>

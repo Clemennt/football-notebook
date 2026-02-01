@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>FM Tool – Effectif</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Onglets -->
+  <div class="top-tabs">
+    <button onclick="location.href='index.html'">🏠 - Accueil</button>
+    <button onclick="location.href='season.html'">📋 -  Saison</button>
+    <button onclick="location.href='squad.html'">👥 - Effectif</button>
+    <button onclick="location.href='stats.html'">📊 - Statistiques</button>
+    <button onclick="location.href='scouting.html'">🔍 - Scouting</button>
+    <button onclick="location.href='scouting_youth.html'">🎓 - Scouting Jeunes</button>
+    <button onclick="location.href='review.html'">📑 - Bilan de la saison</button>
+    <button onclick="location.href='settings.html'">⚙️ - Paramètres</button>
+  </div>
+
+
+  <h2 class="section blue">Effectif Équipe Première</h2>
+
+  <!-- GARDIENS -->
+  <div class="squad-block">
+    <h3 class="squad-title">🧤 Gardiens</h3>
+    <table class="squad-table" data-squad="gardiens">
+      <thead>
+        <tr>
+          <th>Numéro</th>
+          <th>Nom</th>
+          <th>Âge</th>
+          <th>Meilleur poste</th>
+          <th>Autre poste</th>
+          <th>Niveau</th>
+          <th>Potentiel</th>
+          <th>Statut</th>
+          <th>Prêt</th>
+          <th>Suppr.</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <button type="button" class="btn" onclick="addSquadRow('gardiens')">+ Ajouter</button>
+  </div>
+
+  <!-- DEFENSEURS -->
+  <div class="squad-block">
+    <h3 class="squad-title">🛡️ Défenseurs</h3>
+    <table class="squad-table" data-squad="defenseurs">
+      <thead>
+        <tr>
+          <th>Numéro</th>
+          <th>Nom</th>
+          <th>Âge</th>
+          <th>Meilleur poste</th>
+          <th>Autre poste</th>
+          <th>Niveau</th>
+          <th>Potentiel</th>
+          <th>Statut</th>
+          <th>Prêt</th>
+          <th>Suppr.</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <button type="button" class="btn" onclick="addSquadRow('defenseurs')">+ Ajouter</button>
+  </div>
+
+  <!-- MILIEUX -->
+  <div class="squad-block">
+    <h3 class="squad-title">⚙️ Milieux</h3>
+    <table class="squad-table" data-squad="milieux">
+      <thead>
+        <tr>
+          <th>Numéro</th>
+          <th>Nom</th>
+          <th>Âge</th>
+          <th>Meilleur poste</th>
+          <th>Autre poste</th>
+          <th>Niveau</th>
+          <th>Potentiel</th>
+          <th>Statut</th>
+          <th>Prêt</th>
+          <th>Suppr.</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <button type="button" class="btn" onclick="addSquadRow('milieux')">+ Ajouter</button>
+  </div>
+
+  <!-- ATTAQUANTS -->
+  <div class="squad-block">
+    <h3 class="squad-title">🎯 Attaquants</h3>
+    <table class="squad-table" data-squad="attaquants">
+      <thead>
+        <tr>
+          <th>Numéro</th>
+          <th>Nom</th>
+          <th>Âge</th>
+          <th>Meilleur poste</th>
+          <th>Autre poste</th>
+          <th>Niveau</th>
+          <th>Potentiel</th>
+          <th>Statut</th>
+          <th>Prêt</th>
+          <th>Suppr.</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <button type="button" class="btn" onclick="addSquadRow('attaquants')">+ Ajouter</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
