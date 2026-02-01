@@ -18,6 +18,11 @@ Il permet de centraliser :
 
 ---
 
+🌐 **Accéder à l’outil en ligne**  
+👉 https://clemennt.github.io/football-notebook/
+
+---
+
 ## 🚀 Fonctionnalités
 
 - 📋 Présentation de la saison
