@@ -64,7 +64,6 @@ Tu as une idée, un bug à signaler ou une suggestion d’amélioration ?
 - 🐛 Ouvre une **Issue GitHub** (recommandé pour les bugs)
 - 💬 Rejoins le Discord pour discuter et proposer des idées :  
   👉 https://discord.gg/rtfST4DnJm
-
 ---
 
 ## ⚠️ Remarque
