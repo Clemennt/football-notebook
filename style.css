@@ -399,24 +399,24 @@ label {
 }
 
 /* ===== EFFECTIF ===== */
-.squad-block{
-  background:#fff;
-  border:1px solid #dfe3f0;
-  border-radius:12px;
-  padding:14px;
+.squad-block {
+  background: #fff;
+  border: 1px solid #dfe3f0;
+  border-radius: 12px;
+  padding: 14px;
   margin: 18px 0;
 }
 
-.squad-title{
+.squad-title {
   margin: 0 0 10px;
 }
 
-.squad-table th{
-  background:#f0f0f0;
-  text-align:center;
+.squad-table th {
+  background: #f0f0f0;
+  text-align: center;
 }
 
-.squad-table td{
+.squad-table td {
   text-align: center;
   vertical-align: middle;
   min-width: 110px;
@@ -438,11 +438,10 @@ label {
   text-align: center;
 }
 
-
 /* Nom en bleu si prêt (uniquement le nom) */
-.loan-name{
-  color:#1e90ff;
-  font-weight:bold;
+.loan-name {
+  color: #1e90ff;
+  font-weight: bold;
 }
 /* Badge Statut */
 td select {
@@ -488,28 +487,28 @@ td select {
 }
 
 /* ===== STATS ===== */
-.stats-block{
-  background:#fff;
-  border:1px solid #dfe3f0;
-  border-radius:12px;
-  padding:14px;
+.stats-block {
+  background: #fff;
+  border: 1px solid #dfe3f0;
+  border-radius: 12px;
+  padding: 14px;
   margin: 18px 0;
 }
 
-.stats-actions{
-  display:flex;
-  gap:10px;
+.stats-actions {
+  display: flex;
+  gap: 10px;
   margin-top: 12px;
 }
 
-.stats-table th{
-  text-align:center;
-  background:#f0f0f0;
+.stats-table th {
+  text-align: center;
+  background: #f0f0f0;
 }
 
-.stats-table td{
-  text-align:center;
-  vertical-align:middle;
+.stats-table td {
+  text-align: center;
+  vertical-align: middle;
 }
 
 .stats-table td input {
@@ -524,14 +523,14 @@ td select {
 }
 /* ===== COULEURS NOTES (STATS) ===== */
 .note-good {
-  background: #dcfce7;   /* vert clair */
-  color: #166534;        /* vert foncé */
+  background: #dcfce7; /* vert clair */
+  color: #166534; /* vert foncé */
   font-weight: bold;
 }
 
 .note-bad {
-  background: #fee2e2;   /* rouge clair */
-  color: #991b1b;        /* rouge foncé */
+  background: #fee2e2; /* rouge clair */
+  color: #991b1b; /* rouge foncé */
   font-weight: bold;
 }
 /* ===== CADRES NOTES (cellule) ===== */
@@ -705,8 +704,8 @@ td select {
 
 /* On garde les cellules en mode tableau */
 .scouting-table td {
-  vertical-align: middle;  /* ✅ centrage vertical */
-  overflow: hidden;        /* ✅ rien ne dépasse */
+  vertical-align: middle; /* ✅ centrage vertical */
+  overflow: hidden; /* ✅ rien ne dépasse */
   padding: 6px;
 }
 
@@ -718,7 +717,7 @@ td select {
   width: 100%;
   max-width: 100%;
   display: block;
-  margin: 0 auto;          /* ✅ centré horizontalement */
+  margin: 0 auto; /* ✅ centré horizontalement */
   border: 1px solid transparent;
   outline: none;
   background: transparent;
@@ -775,11 +774,11 @@ td select {
 .block textarea:focus {
   outline: none;
   border-color: #3b82f6;
-  box-shadow: 0 0 0 2px rgba(59,130,246,.25);
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.25);
 }
 
 /* ===== BILAN : grille 2x2 ===== */
-.bilan-grid{
+.bilan-grid {
   max-width: 1200px;
   margin: 20px auto;
   display: grid;
@@ -790,14 +789,14 @@ td select {
 }
 
 /* Mobile : 1 colonne */
-@media (max-width: 900px){
-  .bilan-grid{
+@media (max-width: 900px) {
+  .bilan-grid {
     grid-template-columns: 1fr;
   }
 }
 
 /* Tes blocs restent identiques, mais on enlève le max-width interne */
-.bilan-grid .block{
+.bilan-grid .block {
   max-width: none;
   margin: 0;
 }
@@ -806,7 +805,7 @@ td select {
    SETTINGS PAGE
 ====================================================== */
 
-.settings-grid{
+.settings-grid {
   max-width: 1200px;
   margin: 20px auto;
   display: grid;
@@ -815,54 +814,54 @@ td select {
   padding: 0 14px;
 }
 
-@media (max-width: 900px){
-  .settings-grid{
+@media (max-width: 900px) {
+  .settings-grid {
     grid-template-columns: 1fr;
   }
 }
 
-.settings-card{
+.settings-card {
   background: #fff;
   border-radius: 16px;
   padding: 18px;
   border: 1px solid #dfe3f0;
 }
 
-.settings-card h3{
+.settings-card h3 {
   margin: 0 0 10px 0;
 }
 
-.settings-card p{
+.settings-card p {
   margin: 0 0 14px 0;
   color: #374151;
 }
 
-.settings-row{
+.settings-row {
   display: flex;
   flex-direction: column;
   gap: 6px;
   margin-bottom: 14px;
 }
 
-.settings-row input{
+.settings-row input {
   padding: 10px 12px;
   border-radius: 12px;
   border: 1px solid #d1d5db;
   outline: none;
 }
 
-.settings-row input:focus{
+.settings-row input:focus {
   border-color: #3b82f6;
-  box-shadow: 0 0 0 2px rgba(59,130,246,.25);
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.25);
 }
 
-.settings-actions{
+.settings-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
 }
 
-.btn{
+.btn {
   background: #2563eb;
   color: #fff;
   border: none;
@@ -872,20 +871,20 @@ td select {
   font-weight: 700;
 }
 
-.btn:hover{
+.btn:hover {
   filter: brightness(0.95);
 }
 
-.btn-ghost{
+.btn-ghost {
   background: #e5e7eb;
   color: #111827;
 }
 
-.btn-danger{
+.btn-danger {
   background: #dc2626;
 }
 
-.settings-note{
+.settings-note {
   display: block;
   margin-top: 10px;
   color: #6b7280;
@@ -895,8 +894,19 @@ td select {
   position: fixed;
   left: -99999px;
   top: 0;
-  width: 1280px;     /* largeur stable */
-  height: 720px;     /* hauteur stable */
+  width: 1280px; /* largeur stable */
+  height: 720px; /* hauteur stable */
   border: 0;
   background: white;
+}
+.discord-btn {
+  background: #5865f2 !important;
+  color: #fff !important;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.discord-btn:hover {
+  opacity: 0.92;
 }
