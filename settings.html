@@ -1,90 +1,141 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8" />
-  <title>Paramètres</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-
-  <div class="top-tabs">
-    <button onclick="location.href='index.html'">🏠 - Accueil</button>
-    <button onclick="location.href='season.html'">📋 -  Saison</button>
-    <button onclick="location.href='squad.html'">👥 - Effectif</button>
-    <button onclick="location.href='stats.html'">📊 - Statistiques</button>
-    <button onclick="location.href='scouting.html'">🔍 - Scouting</button>
-    <button onclick="location.href='scouting_youth.html'">🎓 - Scouting Jeunes</button>
-    <button onclick="location.href='review.html'">📑 - Bilan de la saison</button>
-    <button onclick="location.href='settings.html'">⚙️ - Paramètres</button>
-  </div>
-
-  <h2 class="section blue">Paramètres</h2>
-
-  <div class="settings-grid">
-
-    <div class="settings-card">
-      <h3>📄 Export PDF</h3>
-      <p>Exporter un PDF pour garder un historique de ta saison.</p>
-
-      <div class="settings-row">
-        <label>Nom de saison (optionnel)</label>
-        <input type="text" data-save="settings_seasonName" placeholder="Ex: Saison_2026_OM">
-      </div>
-
-      <div class="settings-actions">
-        <button class="btn" onclick="exportCurrentPagePDF()">Exporter la page actuelle</button>
-        <button class="btn" onclick="exportAllPagesPDF()">Exporter toutes les pages (ZIP)</button>
-      </div>
-
-      <small class="settings-note">
-        ⚠️ L’export “toutes les pages” nécessite un navigateur moderne. Si ça bloque, on fera une version “1 PDF par page”.
-      </small>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Paramètres</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="top-tabs">
+      <button onclick="location.href = 'index.html'">🏠 - Accueil</button>
+      <button onclick="location.href = 'season.html'">📋 - Saison</button>
+      <button onclick="location.href = 'squad.html'">👥 - Effectif</button>
+      <button onclick="location.href = 'stats.html'">📊 - Statistiques</button>
+      <button onclick="location.href = 'scouting.html'">🔍 - Scouting</button>
+      <button onclick="location.href = 'scouting_youth.html'">
+        🎓 - Scouting Jeunes
+      </button>
+      <button onclick="location.href = 'review.html'">
+        📑 - Bilan de la saison
+      </button>
+      <button onclick="location.href = 'settings.html'">⚙️ - Paramètres</button>
     </div>
 
-    <div class="settings-card">
-      <h3>💾 Sauvegarde / Restauration</h3>
-      <p>Exporter toutes tes données (localStorage) en fichier JSON, et les réimporter.</p>
+    <h2 class="section blue">Paramètres</h2>
 
-      <div class="settings-actions">
-        <button class="btn" onclick="exportDataJSON()">Exporter les données (JSON)</button>
+    <div class="settings-grid">
+      <div class="settings-card">
+        <h3>📄 Export PDF</h3>
+        <p>Exporter un PDF pour garder un historique de ta saison.</p>
 
-        <label class="btn btn-ghost" for="importFile">
-          Importer un JSON
-        </label>
-        <input id="importFile" type="file" accept="application/json" style="display:none" onchange="importDataJSON(event)">
+        <div class="settings-row">
+          <label>Nom de saison (optionnel)</label>
+          <input
+            type="text"
+            data-save="settings_seasonName"
+            placeholder="Ex: Saison_2026_OM"
+          />
+        </div>
+
+        <div class="settings-actions">
+          <button class="btn" onclick="exportCurrentPagePDF()">
+            Exporter la page actuelle
+          </button>
+          <button class="btn" onclick="exportAllPagesPDF()">
+            Exporter toutes les pages (ZIP)
+          </button>
+        </div>
+
+        <small class="settings-note">
+          ⚠️ L’export “toutes les pages” nécessite un navigateur moderne. Si ça
+          bloque, on fera une version “1 PDF par page”.
+        </small>
       </div>
 
-      <small class="settings-note">
-        💡 Idéal pour changer d’ordinateur ou conserver des saisons.
-      </small>
-    </div>
+      <div class="settings-card">
+        <h3>💾 Sauvegarde / Restauration</h3>
+        <p>
+          Exporter toutes tes données (localStorage) en fichier JSON, et les
+          réimporter.
+        </p>
 
-    <div class="settings-card">
-      <h3>🧹 Réinitialisation</h3>
-      <p>Supprimer les données sauvegardées.</p>
+        <div class="settings-actions">
+          <button class="btn" onclick="exportDataJSON()">
+            Exporter les données (JSON)
+          </button>
 
-      <div class="settings-actions">
-        <button class="btn btn-danger" onclick="resetAllData()">Tout réinitialiser</button>
-        <button class="btn btn-danger" onclick="resetOnlyStats()">Réinitialiser Statistiques</button>
-        <button class="btn btn-danger" onclick="resetOnlySquad()">Réinitialiser Effectif</button>
+          <label class="btn btn-ghost" for="importFile">
+            Importer un JSON
+          </label>
+          <input
+            id="importFile"
+            type="file"
+            accept="application/json"
+            style="display: none"
+            onchange="importDataJSON(event)"
+          />
+        </div>
+
+        <small class="settings-note">
+          💡 Idéal pour changer d’ordinateur ou conserver des saisons.
+        </small>
       </div>
 
-      <small class="settings-note">
-        ⚠️ Action irréversible (sauf si tu as exporté un JSON avant).
-      </small>
+      <div class="settings-card">
+        <h3>🧹 Réinitialisation</h3>
+        <p>Supprimer les données sauvegardées.</p>
+
+        <div class="settings-actions">
+          <button class="btn btn-danger" onclick="resetAllData()">
+            Tout réinitialiser
+          </button>
+          <button class="btn btn-danger" onclick="resetOnlyStats()">
+            Réinitialiser Statistiques
+          </button>
+          <button class="btn btn-danger" onclick="resetOnlySquad()">
+            Réinitialiser Effectif
+          </button>
+        </div>
+
+        <small class="settings-note">
+          ⚠️ Action irréversible (sauf si tu as exporté un JSON avant).
+        </small>
+      </div>
+
+      <!-- ✅ NOUVEAU BLOC DISCORD -->
+      <div class="settings-card">
+        <h3>💬 Communauté & Support</h3>
+        <p>
+          Une idée, un bug ou une suggestion ?
+          <br />
+          Tu peux passer par les Issues GitHub ou rejoindre le Discord.
+        </p>
+
+        <div class="settings-actions">
+          <a
+            class="btn discord-btn"
+            href="https://discord.gg/rtfST4DnJm"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Rejoindre le Discord
+          </a>
+        </div>
+
+        <small class="settings-note">
+          📌 Pour les bugs : privilégie une Issue GitHub (plus simple à suivre).
+        </small>
+      </div>
     </div>
 
-  </div>
+    <!-- libs PDF (CDN) -->
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
 
-  <!-- libs PDF (CDN) -->
-  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
+    <!-- ✅ ZIP + téléchargement -->
+    <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js"></script>
 
-  <!-- ✅ ZIP + téléchargement -->
-  <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js"></script>
-
-  <script src="script.js"></script>
-
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
