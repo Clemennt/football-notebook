@@ -2,7 +2,7 @@
 body {
   font-family: Arial, sans-serif;
   padding: 20px;
-  background: #8920a3; /* Violet foncé pour le fond */
+  background: #5d2e69; /* Violet foncé pour le fond */
   color: #000000;
 }
 
@@ -29,8 +29,31 @@ body {
 .row {
   display: flex;
   gap: 20px;
-  margin: 20px 0;
+  margin: 20px 0
 }
+
+/* Boîte d'information - Présentation de la saison */
+.info-box {
+  flex: 1;
+  background:#869aae;
+  border: 1px solid #dfe3f0;
+  border-radius: 12px;
+  padding: 14px;
+  display: flex;
+  gap: 15px;
+}
+
+/* Boîte d'information - Finances */
+.info-finances {
+  flex: 1;
+  background:#869aae;
+  border: 1px solid #dfe3f0;
+  border-radius: 12px;
+  padding: 14px;
+  display: flex;
+  gap: 15px;
+}
+
 
 /* Style des formulaires */
 input,
@@ -110,7 +133,7 @@ table td {
 /* Colonne Arrivées / Départs */
 .transfer-column {
   width: 48%;
-  background: white;
+  background: #869aae;
   padding: 15px;
   border-radius: 6px;
   border: 2px solid #ddd;
@@ -244,7 +267,7 @@ td.delete-cell {
 
 /* ===== PAGE ACCUEIL ===== */
 section {
-  background: #ffffff;
+  background: #8a7f78;
   padding: 20px;
   border-radius: 12px;
   margin-bottom: 25px;
@@ -265,7 +288,7 @@ section h2 {
 }
 
 .overview-grid div {
-  background: #f9fafb;
+  background: #869aae;
   padding: 15px;
   border-radius: 10px;
   text-align: center;
@@ -285,7 +308,7 @@ label {
   grid-template-columns: repeat(1, 1fr);
   gap: 15px;
   margin-bottom: 15px;
-  background: #ffffff;
+  background: #869aae;
   padding: 15px;
   border-radius: 10px;
   text-align: center;
@@ -297,7 +320,7 @@ label {
   grid-template-columns: repeat(1, 1fr);
   gap: 15px;
   margin-bottom: 15px;
-  background: #ffffff;
+  background: #869aae;
   padding: 15px;
   border-radius: 10px;
   text-align: center;
@@ -313,7 +336,7 @@ label {
 }
 
 .card {
-  background: #f9fafb;
+  background: #869aae;
   padding: 18px;
   border-radius: 12px;
   text-align: center;
@@ -327,9 +350,23 @@ label {
   color: #2563eb;
 }
 
+/* Notes rapides */
+.notes-rapides {
+  display: center;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 15px;
+  margin-bottom: 15px;
+  background: #869aae;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  border: 1px solid #e5e7eb;
+}
+
+
 .objectives-box {
   flex: 1;
-  background: #ffffff;
+  background: #869aae;
   border: 1px solid #dfe3f0;
   border-radius: 12px;
   padding: 14px;
@@ -399,27 +436,28 @@ label {
 }
 
 /* ===== EFFECTIF ===== */
-.squad-block {
-  background: #fff;
-  border: 1px solid #dfe3f0;
-  border-radius: 12px;
-  padding: 14px;
+.squad-block{
+  background:#869aae;
+  border:1px solid #dfe3f0;
+  border-radius:12px;
+  padding:14px;
   margin: 18px 0;
 }
 
-.squad-title {
+.squad-title{
   margin: 0 0 10px;
 }
 
-.squad-table th {
-  background: #f0f0f0;
-  text-align: center;
+.squad-table th{
+  background:#ffffff;
+  text-align:center;
 }
 
-.squad-table td {
+.squad-table td{
   text-align: center;
   vertical-align: middle;
   min-width: 110px;
+  background: #a17fbf;
 }
 
 /* Cellules éditables */
@@ -438,10 +476,11 @@ label {
   text-align: center;
 }
 
+
 /* Nom en bleu si prêt (uniquement le nom) */
-.loan-name {
-  color: #1e90ff;
-  font-weight: bold;
+.loan-name{
+  color:#2036f9;
+  font-weight:bold;
 }
 /* Badge Statut */
 td select {
@@ -487,28 +526,29 @@ td select {
 }
 
 /* ===== STATS ===== */
-.stats-block {
-  background: #fff;
-  border: 1px solid #dfe3f0;
-  border-radius: 12px;
-  padding: 14px;
+.stats-block{
+  background:#869aae;
+  border:1px solid #dfe3f0;
+  border-radius:12px;
+  padding:14px;
   margin: 18px 0;
 }
 
-.stats-actions {
-  display: flex;
-  gap: 10px;
+.stats-actions{
+  display:flex;
+  gap:10px;
   margin-top: 12px;
 }
 
-.stats-table th {
-  text-align: center;
-  background: #f0f0f0;
+.stats-table th{
+  text-align:center;
+  background:#f0f0f0;
 }
 
-.stats-table td {
-  text-align: center;
-  vertical-align: middle;
+.stats-table td{
+  text-align:center;
+  vertical-align:middle;
+  background: #a17fbf;
 }
 
 .stats-table td input {
@@ -523,14 +563,14 @@ td select {
 }
 /* ===== COULEURS NOTES (STATS) ===== */
 .note-good {
-  background: #dcfce7; /* vert clair */
-  color: #166534; /* vert foncé */
+  background: #dcfce7;   /* vert clair */
+  color: #166534;        /* vert foncé */
   font-weight: bold;
 }
 
 .note-bad {
-  background: #fee2e2; /* rouge clair */
-  color: #991b1b; /* rouge foncé */
+  background: #fee2e2;   /* rouge clair */
+  color: #991b1b;        /* rouge foncé */
   font-weight: bold;
 }
 /* ===== CADRES NOTES (cellule) ===== */
@@ -566,7 +606,7 @@ td select {
 
 .note-bad-cell {
   border: 2px solid #dc2626 !important;
-  background: #fee2e2;
+  background: #f0f0f0;
 }
 
 .stats-table td input {
@@ -613,6 +653,7 @@ td select {
 
 .scouting-table td {
   text-align: center;
+  background: #a17fbf;
 }
 
 .scouting-table td input {
@@ -622,6 +663,7 @@ td select {
   background: transparent;
   padding: 6px;
   text-align: center;
+  font-size: 15px;
 }
 
 .scouting-table td input:focus {
@@ -704,8 +746,8 @@ td select {
 
 /* On garde les cellules en mode tableau */
 .scouting-table td {
-  vertical-align: middle; /* ✅ centrage vertical */
-  overflow: hidden; /* ✅ rien ne dépasse */
+  vertical-align: middle;  /* ✅ centrage vertical */
+  overflow: hidden;        /* ✅ rien ne dépasse */
   padding: 6px;
 }
 
@@ -717,7 +759,7 @@ td select {
   width: 100%;
   max-width: 100%;
   display: block;
-  margin: 0 auto; /* ✅ centré horizontalement */
+  margin: 0 auto;          /* ✅ centré horizontalement */
   border: 1px solid transparent;
   outline: none;
   background: transparent;
@@ -746,7 +788,7 @@ td select {
 
 /*Pour la page Bilan de la saison  */
 .block {
-  background: #fff;
+  background: #8a7f78;
   border-radius: 16px;
   padding: 20px;
   margin: 20px auto;
@@ -774,11 +816,11 @@ td select {
 .block textarea:focus {
   outline: none;
   border-color: #3b82f6;
-  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.25);
+  box-shadow: 0 0 0 2px rgba(59,130,246,.25);
 }
 
 /* ===== BILAN : grille 2x2 ===== */
-.bilan-grid {
+.bilan-grid{
   max-width: 1200px;
   margin: 20px auto;
   display: grid;
@@ -789,14 +831,14 @@ td select {
 }
 
 /* Mobile : 1 colonne */
-@media (max-width: 900px) {
-  .bilan-grid {
+@media (max-width: 900px){
+  .bilan-grid{
     grid-template-columns: 1fr;
   }
 }
 
 /* Tes blocs restent identiques, mais on enlève le max-width interne */
-.bilan-grid .block {
+.bilan-grid .block{
   max-width: none;
   margin: 0;
 }
@@ -805,7 +847,30 @@ td select {
    SETTINGS PAGE
 ====================================================== */
 
-.settings-grid {
+.settings-card input[type="text"],
+.settings-card input[type="file"] {
+  text-align: center;
+}
+
+.settings-card input[type="text"] {
+  margin: 0 auto;
+  display: block;
+}
+
+.settings-note {
+  display: block;
+  margin-top: 12px;
+  text-align: center;
+}
+
+.settings-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.settings-grid{
   max-width: 1200px;
   margin: 20px auto;
   display: grid;
@@ -814,54 +879,57 @@ td select {
   padding: 0 14px;
 }
 
-@media (max-width: 900px) {
-  .settings-grid {
+@media (max-width: 900px){
+  .settings-grid{
     grid-template-columns: 1fr;
   }
 }
 
-.settings-card {
+.settings-card{
   background: #fff;
   border-radius: 16px;
   padding: 18px;
   border: 1px solid #dfe3f0;
+  text-align: center;
 }
 
-.settings-card h3 {
+.settings-card h3{
   margin: 0 0 10px 0;
 }
 
-.settings-card p {
+.settings-card p{
   margin: 0 0 14px 0;
   color: #374151;
 }
 
-.settings-row {
+.settings-row{
   display: flex;
   flex-direction: column;
   gap: 6px;
   margin-bottom: 14px;
 }
 
-.settings-row input {
+.settings-row input{
   padding: 10px 12px;
   border-radius: 12px;
   border: 1px solid #d1d5db;
   outline: none;
 }
 
-.settings-row input:focus {
+.settings-row input:focus{
   border-color: #3b82f6;
-  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.25);
+  box-shadow: 0 0 0 2px rgba(59,130,246,.25);
 }
 
-.settings-actions {
+.settings-actions{
   display: flex;
+  justify-content: center;
+  gap: 12px;
   flex-wrap: wrap;
-  gap: 10px;
+  margin-top: 12px;
 }
 
-.btn {
+.btn{
   background: #2563eb;
   color: #fff;
   border: none;
@@ -871,20 +939,20 @@ td select {
   font-weight: 700;
 }
 
-.btn:hover {
+.btn:hover{
   filter: brightness(0.95);
 }
 
-.btn-ghost {
+.btn-ghost{
   background: #e5e7eb;
   color: #111827;
 }
 
-.btn-danger {
+.btn-danger{
   background: #dc2626;
 }
 
-.settings-note {
+.settings-note{
   display: block;
   margin-top: 10px;
   color: #6b7280;
@@ -894,11 +962,15 @@ td select {
   position: fixed;
   left: -99999px;
   top: 0;
-  width: 1280px; /* largeur stable */
-  height: 720px; /* hauteur stable */
+  width: 1280px;     /* largeur stable */
+  height: 720px;     /* hauteur stable */
   border: 0;
   background: white;
 }
+
+/* ====================================================
+   Bouton Discord fixe en bas à droite
+==================================================== */
 .discord-btn {
   background: #5865f2 !important;
   color: #fff !important;
@@ -909,4 +981,108 @@ td select {
 }
 .discord-btn:hover {
   opacity: 0.92;
+}
+
+.settings-card-discord {
+  grid-column: 1 / -1;
+  max-width: 600px;
+  margin: 0px auto;
+  background: #fff;
+  border-radius: 16px;
+  padding: 18px;
+  border: 1px solid #dfe3f0;
+  text-align: center;
+  border: 2px dashed rgba(88,101,242,0.6);
+}
+
+/* ======================================================
+   CHANGELOG – PARAMÈTRES
+====================================================== */
+
+.changelog-list {
+  margin: 10px 0 0;
+  padding-left: 18px;
+  font-size: 14px;
+}
+
+.changelog-list li {
+  margin-bottom: 6px;
+  line-height: 1.4;
+}
+
+
+
+/* ===== FORMAT IDENTIQUE POUR TOUT LE FICHIERS ===== */
+/* ===== TYPOGRAPHIE UNIFIÉE ===== */
+body {
+  font-family: "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #111827;
+}
+
+/* Forcer la même typo dans TOUS les champs */
+input,
+textarea,
+select,
+button {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+table td {
+  font-weight: 500;
+}
+
+input,
+textarea {
+  font-weight: 500;
+}
+.scouting-table input,
+.scouting-table textarea,
+.scouting-table select {
+  padding: 6px 8px;
+}
+/* ===== FIN FORMAT UNIFIÉ ===== */
+
+/* ======================================================
+   STATUTS – AMÉLIORATION VISIBILITÉ
+====================================================== */
+
+select.status-badge {
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.15);
+  text-shadow: 0 1px 1px rgba(0,0,0,0.35);
+}
+
+/* 🔥 Accent spécial JEUNE JOUEUR */
+select.status-badge[data-status="Jeune joueur"] {
+  border: 2px dashed rgba(255,255,255,0.95);
+  box-shadow:
+    inset 0 0 0 1px rgba(0,0,0,0.15),
+    0 0 0 2px rgba(124,92,246,0.55);
+}
+
+/* 🔁 (optionnel) Accent prêt */
+select.status-badge[data-status="Partit en prêt"] {
+  border: 2px solid rgba(255,255,255,0.9);
+  box-shadow:
+    inset 0 0 0 1px rgba(0,0,0,0.15),
+    0 0 0 2px rgba(239,68,68,0.6);
+}
+
+/* ===== Texte Finances ===== */
+.finance-grid input,
+.finance-grid textarea {
+  width: 100%;
+  text-align: center;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #111827;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+.finance-grid textarea {
+  text-align: left;      /* plus naturel pour du texte */
+  min-height: 90px;
+  resize: vertical;
 }

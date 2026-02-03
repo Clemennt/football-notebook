@@ -33,14 +33,17 @@ const STATUTS = [
   "Remplaçant",
   "Jeune joueur",
   "Joueur secondaire",
+  "Partit en prêt",
 ];
 
 const STATUT_COLORS = {
-  "Titulaire important": "#16a34a",
-  "Remplaçant": "#2563eb",
-  "Joueur secondaire": "#f59e0b",
-  "Jeune joueur": "#7c3aed",
+  "Titulaire important": "#16a34a",   // Vert – pilier de l'équipe (OK)
+  "Remplaçant": "#0ea5e9",            // Bleu clair – rotation / impact
+  "Joueur secondaire": "#f59e0b",     // Orange – utilité ponctuelle (OK)
+  "Jeune joueur": "#8b5cf6",          // Violet doux – développement
+  "Partit en prêt": "#ef4444",        // Rouge FM – hors effectif temporaire
 };
+
 
 const POSTE_ORDER = {
   "GB": 0,
@@ -124,17 +127,22 @@ function applyPosteBadge(select) {
     select.style.fontSize = "12px";
     select.style.padding = "4px 8px";
     select.style.borderRadius = "6px";
-    select.style.border = "1px solid rgba(255,255,255,0.2)";
+    select.style.border = "2px solid rgba(0, 0, 0, 0.8)";
   } else {
     select.style.backgroundColor = "#e5e7eb";
     select.style.color = "#4b5563";
     select.style.fontWeight = "normal";
-    select.style.border = "1px solid #d1d5db";
+    select.style.border = "1px solid #000000";
   }
 }
 
 function applyStatutBadge(select) {
   const color = STATUT_COLORS[select.value];
+
+  // Classe commune pour tous les statuts
+  select.classList.add("status-badge");
+  select.dataset.status = select.value || "";
+
   if (color) {
     select.style.backgroundColor = color;
     select.style.color = "#fff";
@@ -142,14 +150,15 @@ function applyStatutBadge(select) {
     select.style.fontSize = "12px";
     select.style.padding = "4px 8px";
     select.style.borderRadius = "6px";
-    select.style.border = "1px solid rgba(255,255,255,0.2)";
+    select.style.border = "2px solid rgba(0, 0, 0, 0.8)";
   } else {
     select.style.backgroundColor = "#e5e7eb";
     select.style.color = "#4b5563";
     select.style.fontWeight = "normal";
-    select.style.border = "1px solid #d1d5db";
+    select.style.border = "1px solid #000000";
   }
 }
+
 
 // ======================================================
 // TRANSFERTS (arrivees / departs)
@@ -762,8 +771,10 @@ function applyBadge(select, colors) {
     select.style.backgroundColor = color;
     select.style.color = "#fff";
     select.style.fontWeight = "bold";
+    select.style.fontSize = "12px";
+    select.style.padding = "4px 8px";
     select.style.borderRadius = "8px";
-    select.style.border = "1px solid rgba(255,255,255,0.2)";
+    select.style.border = "2px solid rgba(0, 0, 0, 0.8)";
   } else {
     select.style.backgroundColor = "#e5e7eb";
     select.style.color = "#4b5563";
@@ -779,8 +790,10 @@ function applyRecoBadge(select) {
     select.style.backgroundColor = color;
     select.style.color = "#fff";
     select.style.fontWeight = "bold";
+    select.style.fontSize = "12px";
+    select.style.padding = "4px 8px";
     select.style.borderRadius = "8px";
-    select.style.border = "1px solid rgba(255,255,255,0.2)";
+    select.style.border = "2px solid rgba(0, 0, 0, 0.8)";
   } else {
     select.style.backgroundColor = "#e5e7eb";
     select.style.color = "#4b5563";

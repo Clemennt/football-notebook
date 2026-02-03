@@ -18,11 +18,6 @@ Il permet de centraliser :
 
 ---
 
-🌐 **Accéder à l’outil en ligne**  
-👉 https://clemennt.github.io/football-notebook/
-
----
-
 ## 🚀 Fonctionnalités
 
 - 📋 Présentation de la saison
@@ -62,18 +57,17 @@ Il permet de centraliser :
 
 ---
 
-## 💬 Suggestions & Support
-
-Tu as une idée, un bug à signaler ou une suggestion d’amélioration ?
-
-- 🐛 Ouvre une **Issue GitHub** (recommandé pour les bugs)
-- 💬 Rejoins le Discord pour discuter et proposer des idées :  
-  👉 https://discord.gg/rtfST4DnJm
----
-
 ## ⚠️ Remarque
 Ce projet est un **outil personnel**, non affilié à Sports Interactive ou Football Manager.
 
 ---
 
 Bon jeu ⚽
+
+
+
+
+
+
+
+
